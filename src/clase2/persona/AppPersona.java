@@ -18,6 +18,16 @@ public class AppPersona {
         System.out.println("El nombre   es " + alumno.getNombre());
         System.out.println("El apellido es " + alumno.getApellidos());
         System.out.println("La Edad     es " + alumno.getEdad());
+
+        Persona x = new Persona();
+        x.setNombreApellido("ruben dario", "suarez isidro");
+        System.out.println("otra forma ");
+        System.out.println("apellidos "+x.getApellidos());
+        System.out.println("nombres   "+x.getNombre());
+        
+        
+        
+        
         
     }
 }

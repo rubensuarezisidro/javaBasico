@@ -1,15 +1,15 @@
 
 package clase2.animales;
 
-public class Animal {
+public abstract class Animal {
     private String nombre;
     private String color;
     private double peso;
     private int edad;
 
-    public void hacerRuido(){
+    public abstract void hacerRuido();
     
-    }
+    public abstract void comer();
     
     
     public String getColor() {

@@ -7,9 +7,13 @@ public class Zoologico {
         
         diego.hacerRuido();
         diego.hacerRuido(false);
+        diego.comer();
         
        Perro randall = new Perro("Randall", 8);
        randall.hacerRuido();
+       randall.comer();
+       
+       
     }
     
 }

@@ -7,9 +7,13 @@ public class Video extends Articulo {
     char actores;
     int duracion;
 
-    public Video(int periodo, char titulo, double precio) {
+    public Video(char director, char actores, int duracion, int periodo, String titulo, double precio) {
         super(periodo, titulo, precio);
+        this.director = director;
+        this.actores = actores;
+        this.duracion = duracion;
     }
+
 
   
 

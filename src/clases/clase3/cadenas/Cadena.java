@@ -6,10 +6,24 @@ public class Cadena {
         //Cadena.concatenar();
         //Cadena.extraccion();
         //Cadena.extraccion2();
-        Cadena.reemplazo();
-        Cadena.metodosString();
+        //Cadena.reemplazo();
+        //Cadena.metodosString();
+        //Cadena.espacios();
+        Cadena.buffer1();
     }
 
+    public static void buffer1(){
+        StringBuffer buffer = new StringBuffer("Tecsup");
+        // esta agregando a memoria los texto con el metdo append
+        buffer.append(" - ");
+        buffer.append("Java ");
+        
+        // estamos insertando en memoria los caracteres con insert
+        buffer.insert(0, "INSERTAMOS: INSTITUTO ");
+        System.out.println(buffer);
+    }
+    
+    
     public static void reemplazo() {
         String texto = "java permite crear java applets, javabeans y java servlets";
         System.out.println(texto.replaceAll("java", "JAVA"));
@@ -17,6 +31,13 @@ public class Cadena {
         System.out.println(texto.replaceAll("java", "C"));
     }
     
+    public static void espacios(){
+    String texto = "    java permite crear java applets, javabeans y java servlets    ";
+        System.out.println(texto);
+        System.out.println("quitamos espacios en los extremos:  " + texto.trim());
+        
+    }
+            
     public static void metodosString(){
     String ruben = "RUBEN DARIO SUAREZ ISIDRO";
     

@@ -6,13 +6,15 @@ import java.util.Locale;
 public class Formato {
 
     public static void main(String[] args) {
+        // estamos ejecutando los metodos de la clase principal
+        
         //Formato.numberFormat();
         Formato.monedaFormart();
     }
 
     public static void monedaFormart() {
         // Formato de moneda
-        NumberFormat formatoAleman = NumberFormat.getCurrencyInstance(Locale.GERMANY);
+        NumberFormat formatoAleman = NumberFormat.getCurrencyInstance(Locale.CHINA);
         formatoAleman.setGroupingUsed(false); // quitando el agrupamiento
         NumberFormat formatoAmericano = NumberFormat.getCurrencyInstance(Locale.US);
         formatoAmericano.setGroupingUsed(false); // quitando el agrupamiento
@@ -20,11 +22,12 @@ public class Formato {
         Locale lp = new Locale("es", "PE");
         NumberFormat formatoPeru = NumberFormat.getCurrencyInstance(lp);
         formatoPeru.setGroupingUsed(false); // quitando el agrupamiento
-        System.out.println("Moneda Euro :" + formatoAleman.format(150));
+        System.out.println("Moneda Yen :" + formatoAleman.format(150));
         System.out.println("Moneda Dolar :" + formatoAmericano.format(150));
         System.out.println("Moneda Soles :" + formatoPeru.format(150));
     }
 
+   
     public static void numberFormat() {
         // Establecer el Locale como US para usar el punto como 
         // separador decimal.

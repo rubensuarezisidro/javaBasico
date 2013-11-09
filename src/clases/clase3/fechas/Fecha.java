@@ -6,13 +6,14 @@ import java.util.GregorianCalendar;
 public class Fecha {
 
     public static void main(String[] args) {
-        Fecha.fechas();
+        Fecha.gregorianCalendar();
     }
 
-    public static void fechas() {
+    public static void gregorianCalendar() {
         GregorianCalendar ahora = new GregorianCalendar();
         // Crear una fecha
         //Calendar ahora = new GregorianCalendar(2007,2,2);
+        //traemos la fecha de hoy 
         System.out.println("Fecha : " + ahora.getTime());
         System.out.println("Año: " + ahora.get(Calendar.YEAR));
         System.out.println("Mes: " + ahora.get(Calendar.MONTH));

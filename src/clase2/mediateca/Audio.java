@@ -5,7 +5,7 @@ public class Audio extends Articulo {
     char autor;
     char direccion;
 
-    public Audio(int periodo, char titulo, double precio) {
+    public Audio(int periodo, String titulo, double precio) {
         super(periodo, titulo, precio);
     }
 }

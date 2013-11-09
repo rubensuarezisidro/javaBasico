@@ -3,10 +3,10 @@ package clase2.mediateca;
 public abstract class Articulo {
 
     int periodo;
-    char titulo;
+    String titulo;
     double precio;
 
-    public Articulo(int periodo, char titulo, double precio) {
+    public Articulo(int periodo, String titulo, double precio) {
         this.periodo = periodo;
         this.titulo = titulo;
         this.precio = precio;
@@ -20,11 +20,11 @@ public abstract class Articulo {
         this.periodo = periodo;
     }
 
-    public char getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(char titulo) {
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 

@@ -3,21 +3,21 @@ package clase2.mediateca;
 
 
 public class Libro extends Articulo{
-    char autor;
+    String autor;
     int nroPaginas;
     int nroIsbn;
 
-    public Libro(int periodo, char titulo, double precio) {
+    public Libro(int periodo, String titulo, double precio) {
         super(periodo, titulo, precio);
     }
 
-  
+   
 
-    public char getAutor() {
+    public String getAutor() {
         return autor;
     }
 
-    public void setAutor(char autor) {
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 

@@ -12,15 +12,32 @@ public class Fecha {
     public static void main(String[] args) {
         //Fecha.gregorianCalendar();
         //Fecha.dateFormat();
-        Fecha.simpleDateFormat();
+        //Fecha.simpleDateFormat();
+        Fecha.compararFechas();
     }
 
-    public static void simpleDateFormat(){
-    DateFormat formato = new SimpleDateFormat("EEEE MMMM");
-    Date hoy = new Date(); 
+    public static void compararFechas() {
+        Calendar c1 = new GregorianCalendar(2013, 9, 1);
+        Date fecha1 = c1.getTime();
+        Calendar c2 = new GregorianCalendar(2011, 9, 3);
+        Date fecha2 = c2.getTime();
+
+        if (fecha1.after(fecha2)) {
+            System.out.println("fecha1 es después que fecha2");
+        }
+
+        if (fecha1.before(fecha2)) {
+            System.out.println("fecha1 es antes que fecha2");
+        }
+    }
+
+    public static void simpleDateFormat() {
+        //http://docs.oracle.com/javase/1.4.2/docs/api/java/text/SimpleDateFormat.html
+        DateFormat formato = new SimpleDateFormat("EEEE MMMM YYYY");
+        Date hoy = new Date();
         System.out.println(formato.format(hoy));
     }
-    
+
     public static void dateFormat() {
         Date now = new Date();
         System.out.println(now.getTime());
@@ -42,7 +59,7 @@ public class Fecha {
         String s5 = df5.format(now);
         String s6 = df6.format(now);
         String s7 = df7.format(now);
-        
+
         //mostramos los valores en consola de las variables 
         System.out.println("(Default) Hoy es " + s);
         System.out.println("(SHORT) Hoy es " + s1);

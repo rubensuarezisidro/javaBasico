@@ -1,16 +1,63 @@
 package clases.clase3.fechas;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class Fecha {
 
     public static void main(String[] args) {
-        Fecha.gregorianCalendar();
+        //Fecha.gregorianCalendar();
+        //Fecha.dateFormat();
+        Fecha.simpleDateFormat();
+    }
+
+    public static void simpleDateFormat(){
+    DateFormat formato = new SimpleDateFormat("EEEE MMMM");
+    Date hoy = new Date(); 
+        System.out.println(formato.format(hoy));
+    }
+    
+    public static void dateFormat() {
+        Date now = new Date();
+        System.out.println(now.getTime());
+        DateFormat df = DateFormat.getDateInstance();
+        DateFormat df1 = DateFormat.getDateInstance(DateFormat.SHORT);
+        DateFormat df2 = DateFormat.getDateInstance(DateFormat.MEDIUM);
+        DateFormat df3 = DateFormat.getDateInstance(DateFormat.LONG);
+        DateFormat df4 = DateFormat.getDateInstance(DateFormat.FULL);
+        SimpleDateFormat df5 = new SimpleDateFormat(
+                "EEE, d MMM yyyy HH:mm:ssZ");
+        DateFormat df6 = DateFormat.getDateInstance(DateFormat.FULL, Locale.US);
+        DateFormat df7 = DateFormat.getDateInstance(DateFormat.SHORT, Locale.US);
+        // asignamos los valores a una variable
+        String s = df.format(now);
+        String s1 = df1.format(now);
+        String s2 = df2.format(now);
+        String s3 = df3.format(now);
+        String s4 = df4.format(now);
+        String s5 = df5.format(now);
+        String s6 = df6.format(now);
+        String s7 = df7.format(now);
+        
+        //mostramos los valores en consola de las variables 
+        System.out.println("(Default) Hoy es " + s);
+        System.out.println("(SHORT) Hoy es " + s1);
+        System.out.println("(MEDIUM) Hoy es " + s2);
+        System.out.println("(LONG) Hoy es " + s3);
+        System.out.println("(FULL) Hoy es " + s4);
+        System.out.println("(CUSTOM) Hoy es " + s5);
+        System.out.println("(FULL - US) Hoy es " + s6);
+        System.out.println("(SHORT - US) Hoy es " + s7);
     }
 
     public static void gregorianCalendar() {
-        GregorianCalendar ahora = new GregorianCalendar();
+        GregorianCalendar ahora = new GregorianCalendar(1975, 4, 31);
+        //GregorianCalendar ahora = new GregorianCalendar(1975,4,31);
+        //estamos asignando valors si está sin parametro es a fecha de hoy
         // Crear una fecha
         //Calendar ahora = new GregorianCalendar(2007,2,2);
         //traemos la fecha de hoy 

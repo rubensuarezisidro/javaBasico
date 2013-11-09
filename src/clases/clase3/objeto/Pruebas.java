@@ -9,7 +9,16 @@ public class Pruebas {
         Date fecha2 = fecha1;
 
         if (fecha1 == fecha2) {
-            System.out.println("Son iguales. Y porque?");
+            System.out.println("Son iguales. Copara si los objetos apuntan al mismo espeacio");
+            System.out.println(fecha1);
+            System.out.println(fecha2);
+        }
+
+        if (fecha1.equals(fecha2)) {
+            System.out.println("Son iguales. Compara el contenido");
+            System.out.println(fecha1);
+            System.out.println(fecha2);
+
         }
     }
 }

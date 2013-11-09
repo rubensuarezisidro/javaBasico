@@ -1,11 +1,11 @@
-
 package clase2.mediateca;
 
+public class Audio extends Articulo {
 
-public class Audio {
     char autor;
-    char director;
-    char lugar;
-    int duracion; 
-    
+    char direccion;
+
+    public Audio(int periodo, char titulo, double precio) {
+        super(periodo, titulo, precio);
+    }
 }

@@ -2,13 +2,16 @@
 package clase2.mediateca;
 
 
-public class Video {
+public class Video extends Articulo {
     char director;
     char actores;
     int duracion;
 
-    public Video() {
+    public Video(int periodo, char titulo, double precio) {
+        super(periodo, titulo, precio);
     }
+
+  
 
     public char getDirector() {
         return director;

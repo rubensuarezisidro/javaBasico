@@ -2,13 +2,16 @@
 package clase2.mediateca;
 
 
-public class Libro {
+public class Libro extends Articulo{
     char autor;
     int nroPaginas;
     int nroIsbn;
 
-    public Libro() {
+    public Libro(int periodo, char titulo, double precio) {
+        super(periodo, titulo, precio);
     }
+
+  
 
     public char getAutor() {
         return autor;

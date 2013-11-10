@@ -31,11 +31,13 @@ public class Auto implements Posicion {
 
     @Override
     public double getLongitud() {
-        return getLongitud();
+        // debes retornar la variable
+        return longitud;
     }
 
     @Override
     public double getLatitud() {
-        return getLatitud();
+        // debes retornar la variable
+        return latitud;
     }
 }

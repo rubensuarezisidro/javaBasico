@@ -30,11 +30,11 @@ public class Persona implements Posicion {
 
     @Override
     public double getLongitud() {
-        return getLongitud();
+        return longitud;
     }
 
     @Override
     public double getLatitud() {
-        return getLatitud();
+       return latitud;
     }
 }

@@ -7,7 +7,7 @@ public class Formato {
 
     public static void main(String[] args) {
         // estamos ejecutando los metodos de la clase principal
-        
+
         //Formato.numberFormat();
         Formato.monedaFormart();
     }
@@ -27,7 +27,6 @@ public class Formato {
         System.out.println("Moneda Soles :" + formatoPeru.format(150));
     }
 
-   
     public static void numberFormat() {
         // Establecer el Locale como US para usar el punto como 
         // separador decimal.
@@ -38,19 +37,19 @@ public class Formato {
         // No agrupar, ya que es false 
         nf.setGroupingUsed(false);
         System.out.println(nf.format(10000000.0045451));
-                
+
         System.out.println("Con 3 enteros mínimo");
         nf.setMinimumIntegerDigits(3);
         System.out.println(nf.format(12));
-                
+
         System.out.println("Con 5 enteros máximo");
         nf.setMaximumIntegerDigits(5);
         System.out.println(nf.format(123456));
-        
+
         System.out.println("Con 4 enteros máximo en los decimales");
         nf.setMaximumFractionDigits(4);
         System.out.println(nf.format(123.981454));
-        
+
         System.out.println("Con 2 enteros mínimo en los decimales");
         nf.setMinimumFractionDigits(2);
         System.out.println(nf.format(45.2));

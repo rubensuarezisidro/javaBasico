@@ -1,22 +1,17 @@
-
 package clases.clase3.interfaces.posicion;
 
+public class Auto implements Posicion {
 
-public class Auto implements Posicion{
     private int nroPuertas;
     private String color;
-    
     private double longitud;
     private double latitud;
 
-    
     // se coloco un constructor para poder utilizar la interface
-    public Auto() {
-        this.longitud=20d;
-        this.latitud=50d;
+    public Auto(double longitud, double latitud) {
+        this.longitud = longitud;
+        this.latitud = latitud;
     }
-    
-    
 
     public String getColor() {
         return color;
@@ -36,13 +31,11 @@ public class Auto implements Posicion{
 
     @Override
     public double getLongitud() {
-        return(getLongitud());
+        return getLongitud();
     }
 
     @Override
     public double getLatitud() {
-        return(getLatitud());
+        return getLatitud();
     }
-    
-    
 }

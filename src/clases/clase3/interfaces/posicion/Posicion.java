@@ -4,5 +4,5 @@ public interface Posicion {
 
     double getLongitud();
 
-    double getLatitu();
+    double getLatitud();
 }

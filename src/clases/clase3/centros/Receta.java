@@ -2,15 +2,19 @@
 package clases.clase3.centros;
 
 import java.util.Date;
+import java.util.List;
 
 
 public class Receta {
     private Date fecEmision;
     private Date fecVencimiento;
     private int cantidad;
+    private List<String> medicamento; 
     private String medidaReceta;
     private String medicoReceta;
 
+
+    
     public Date getFecEmision() {
         return fecEmision;
     }
@@ -33,6 +37,14 @@ public class Receta {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public List<String> getMedicamento() {
+        return medicamento;
+    }
+
+    public void setMedicamento(List<String> medicamento) {
+        this.medicamento = medicamento;
     }
 
     public String getMedidaReceta() {

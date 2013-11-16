@@ -4,7 +4,7 @@ package clases.clase3.centros;
 import clases.clase3.centros.abstractas.Producto;
 
 
-public class Medicamento  extends Producto{
+public class Medicamento extends Producto{
     String posologia;
     String contraindicaciones;
 

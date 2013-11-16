@@ -40,6 +40,15 @@ public class Receta {
         this.cantidad = cantidad;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    
     public List<String> getMedicamento() {
         return medicamento;
     }

@@ -1,9 +1,12 @@
 package clases.clase4.practica;
 
+import clases.clase4.practica.interfases.Dieta;
+import java.util.List;
+
 public class Alimento implements Dieta {
 
     private String nomAlimento;
-    private String tipoAlimento;
+    private List<String> tipoAlimento;
     private String unidadMedida;
     private int valorNutri;
     private int cantNutricional;
@@ -13,6 +16,6 @@ public class Alimento implements Dieta {
 
     @Override
     public void mezclar() {
-        System.out.println("Mezclando");;
+        System.out.println("Mezclando");
     }
 }

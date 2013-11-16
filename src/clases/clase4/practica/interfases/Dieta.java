@@ -1,4 +1,4 @@
-package clases.clase4.practica;
+package clases.clase4.practica.interfases;
 
 public interface Dieta {
 

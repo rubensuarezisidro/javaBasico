@@ -5,4 +5,7 @@ public class Animal extends Especie{
     private Dieta dietaAimmal;
     private String nombreAnimal;
     
+    public void comer() {
+        System.out.println("Comiendo");
+    }
 }

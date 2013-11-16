@@ -1,6 +1,6 @@
 package clases.clase4.practica;
 
-public class Alimento {
+public class Alimento implements Dieta {
 
     private String nomAlimento;
     private String tipoAlimento;
@@ -10,4 +10,9 @@ public class Alimento {
     private Nutriente tipoNutriente;
     private int cantAgua;
     private int cantAlimento;
+
+    @Override
+    public void mezclar() {
+        System.out.println("Mezclando");;
+    }
 }

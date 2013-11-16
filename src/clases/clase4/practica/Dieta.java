@@ -4,6 +4,7 @@ public class Dieta {
 
     private int cantAgua;
     private int cantAlimento;
+    
 
     public int getCantAgua() {
         return cantAgua;

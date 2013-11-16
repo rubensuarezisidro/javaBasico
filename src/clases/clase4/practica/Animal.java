@@ -8,7 +8,7 @@ public class Animal extends Especie{
     private String nombreAnimal;
     private Alimento tipoAlimento;
 
-    public int getCodigoAnimal() {
+    public int getCodigoAnimsal() {
         return codigoAnimal;
     }
 
@@ -39,10 +39,5 @@ public class Animal extends Especie{
     public void setTipoAlimento(Alimento tipoAlimento) {
         this.tipoAlimento = tipoAlimento;
     }
-    
-    
-    public void comer() {
-    
-        System.out.println("Comiendo");
-    }
+   
 }

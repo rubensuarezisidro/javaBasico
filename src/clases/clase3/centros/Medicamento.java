@@ -2,7 +2,7 @@
 package clases.clase3.centros;
 
 
-public class Medicamento {
+public class Medicamento  extends Producto{
     String posologia;
     String contraindicaciones;
 

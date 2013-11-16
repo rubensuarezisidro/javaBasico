@@ -5,6 +5,22 @@ package clases.clase3.centros;
 public class Medicamento {
     String posologia;
     String contraindicaciones;
+
+    public String getPosologia() {
+        return posologia;
+    }
+
+    public void setPosologia(String posologia) {
+        this.posologia = posologia;
+    }
+
+    public String getContraindicaciones() {
+        return contraindicaciones;
+    }
+
+    public void setContraindicaciones(String contraindicaciones) {
+        this.contraindicaciones = contraindicaciones;
+    }
     
     
     

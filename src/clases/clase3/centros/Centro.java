@@ -16,7 +16,7 @@ private int ruc;
 private String razonSocial;
 private String direccion;
 private List<String> telefono;
-
+private String ditrito;
 
     public int getCodigo() {
         return codigo;

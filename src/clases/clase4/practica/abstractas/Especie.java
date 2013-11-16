@@ -41,7 +41,9 @@ public abstract class Especie {
         this.pesoKG = pesoKG;
     }
     
-    
+    public void comenDieta(){
+        System.out.println("Comiendo dieta");
+    };
     
     
     

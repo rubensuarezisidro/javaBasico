@@ -8,19 +8,19 @@ public class Alimento {
     private List<String> tipoAlimento;
     private String unidadMedida;
     private int valorNutri;
-    private Dieta cantDieta;
+    private int cantDieta;
     private int cantNutricional;
     private Nutriente tipoNutriente;
 
-    
-    public Dieta getCantDieta() {
+    public int getCantDieta() {
         return cantDieta;
     }
 
-    public void setCantDieta(Dieta cantDieta) {
+    public void setCantDieta(int cantDieta) {
         this.cantDieta = cantDieta;
     }
 
+   
     public int getCantNutricional() {
         return cantNutricional;
     }

@@ -1,5 +1,5 @@
 
-package clases.clase3.centros;
+package clases.clase3.centros.abstractas;
 
 
 public abstract class Producto {

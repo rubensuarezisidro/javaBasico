@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clases.clase3.centros;
 
+import clases.clase3.centros.abstractas.Centro;
 import java.util.List;
 
-/**
- *
- * @author RUBEN
- */
+
 public class Botica extends Centro {
         private List<String> horario; 
 

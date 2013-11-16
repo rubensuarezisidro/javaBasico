@@ -1,6 +1,7 @@
 
 package clases.clase3.centros;
 
+import clases.clase3.centros.abstractas.Producto;
 import java.util.List;
 
 

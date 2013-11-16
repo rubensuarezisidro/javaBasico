@@ -1,13 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clases.clase3.centros;
 
-/**
- *
- * @author RUBEN
- */
+import clases.clase3.centros.abstractas.Centro;
+
+
 public class Farmacia extends Centro{
     
 }

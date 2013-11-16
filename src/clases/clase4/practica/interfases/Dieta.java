@@ -1,7 +1,7 @@
 package clases.clase4.practica.interfases;
 
-public interface Dieta {
+public class Dieta {
 
-    public void mezclar();
+    
 
 }

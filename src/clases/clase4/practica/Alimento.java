@@ -3,7 +3,7 @@ package clases.clase4.practica;
 import clases.clase4.practica.interfases.Dieta;
 import java.util.List;
 
-public class Alimento implements Dieta {
+public class Alimento  {
 
     private String nomAlimento;
     private List<String> tipoAlimento;
@@ -14,8 +14,4 @@ public class Alimento implements Dieta {
     private int cantAgua;
     private int cantAlimento;
 
-    @Override
-    public void mezclar() {
-        System.out.println("Mezclando");
-    }
 }

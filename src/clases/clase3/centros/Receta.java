@@ -9,6 +9,7 @@ public class Receta {
     private Date fecEmision;
     private Date fecVencimiento;
     private int cantidad;
+    private Cliente cliente;
     private List<String> medicamento; 
     private String medidaReceta;
     private String medicoReceta;

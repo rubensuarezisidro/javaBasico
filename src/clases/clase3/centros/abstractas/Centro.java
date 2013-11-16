@@ -52,6 +52,14 @@ private String ditrito;
         this.telefono = telefono;
     }
 
+    public String getDitrito() {
+        return ditrito;
+    }
+
+    public void setDitrito(String ditrito) {
+        this.ditrito = ditrito;
+    }
+
 
     
 }

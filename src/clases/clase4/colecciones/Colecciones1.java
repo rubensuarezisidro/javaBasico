@@ -36,9 +36,8 @@ public class Colecciones1 {
 
         for (Estudiante estudiante : listado) {
             estudiante.prntEstudiante();
-
         }
-
+        System.out.println(listado.size());
     }
 
     public static void ejemploEstudiante() {

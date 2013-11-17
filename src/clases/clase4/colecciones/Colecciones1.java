@@ -26,14 +26,22 @@ public class Colecciones1 {
         listado.put("124", ruben);
         listado.put("125", jose);
         listado.put("126", luis);
+        System.out.println(" ");
         //imprimir uno de los registros
         listado.get("122").prntEstudiante();
+        System.out.println("");
         
+        System.out.println("primera forma de imprimir el listado usando collections");
         Collection<Estudiante> listadoMap = listado.values();
         for (Estudiante estudiante : listadoMap) {
             estudiante.prntEstudiante();
-            
         }
+        System.out.println(" ");
+        System.out.println("segunda forma de imprimir el listado usando values");
+        for (Estudiante estudiante : listado.values()) {
+            estudiante.prntEstudiante();
+        }
+        
     }
 
     public static void ejemploHashSet() {

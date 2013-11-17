@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Colecciones1 {
+
     public static void main(String[] args) {
         Colecciones1.ejemploEstudiante();
     }
@@ -24,14 +25,14 @@ public class Colecciones1 {
         listado.add(ruben);
         listado.add(luis);
         listado.add(jose);
-        
+
         // estamos ordenando la lista
         Collections.sort(listado);
-        
+
         for (Estudiante estudiante : listado) {
-                estudiante.prntEstudiante();
-            
+            estudiante.prntEstudiante();
+
         }
-        
+
     }
 }

@@ -11,10 +11,11 @@ public class Cuenta {
     }
 
     public double retirarCajero(double montoRetiro) throws SaldoInsuficienteException {
-        this.saldo = this.saldo - montoRetiro;
+        
         if (montoRetiro > saldo) {
             throw new SaldoInsuficienteException(saldo, montoRetiro);
         }
+        this.saldo = this.saldo - montoRetiro;
         return saldo;
     }
 }

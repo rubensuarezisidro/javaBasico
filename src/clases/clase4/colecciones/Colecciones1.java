@@ -5,9 +5,35 @@ import java.util.*;
 public class Colecciones1 {
 
     public static void main(String[] args) {
-        //Colecciones1.ejemploEstudiante();
+        Colecciones1.ejemploLoMap();
 
-        Colecciones1.ejemploHashSet();
+        //Colecciones1.ejemploHashSet();
+    }
+
+    public static void ejemploLoMap() {
+        Estudiante alberto = new Estudiante("Ñiquen", "Alberto");
+        Estudiante benjamin = new Estudiante("Ayasta", "Benjamin");
+        Estudiante carlos = new Estudiante("Lopez", "Carlos");
+        Estudiante ruben = new Estudiante("Suarez", "Ruben");
+        Estudiante jose = new Estudiante("Eusebio", "Jose");
+        Estudiante luis = new Estudiante("Jimenez", "Luis");
+
+        HashMap<String, Estudiante> listado = new HashMap<String, Estudiante>();
+
+        listado.put("121", alberto);
+        listado.put("122", benjamin);
+        listado.put("123", carlos);
+        listado.put("124", ruben);
+        listado.put("125", jose);
+        listado.put("126", luis);
+        //imprimir uno de los registros
+        listado.get("122").prntEstudiante();
+        
+        Collection<Estudiante> listadoMap = listado.values();
+        for (Estudiante estudiante : listadoMap) {
+            estudiante.prntEstudiante();
+            
+        }
     }
 
     public static void ejemploHashSet() {
@@ -63,6 +89,8 @@ public class Colecciones1 {
             estudiante.prntEstudiante();
 
         }
+        Estudiante nuevo = listado.get(2);
+        nuevo.prntEstudiante();
 
     }
 

@@ -6,5 +6,8 @@ public class Hilo {
         // tipo   nom_variable = new clase();
         HiloHerencia h1 = new HiloHerencia();
         h1.start();
+
+        HiloImplementacion i1 = new HiloImplementacion();
+        i1.run();
     }
 }

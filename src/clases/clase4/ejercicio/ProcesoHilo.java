@@ -8,17 +8,14 @@ public class ProcesoHilo extends Thread {
 
     @Override
     public void run() {
-        listaProcesos();
         for (int i = 0; i <= 20; i++) {
             try {
-                Thread.sleep(100);
                 listaProcesos();
-
+                Thread.sleep(6000);
             } catch (InterruptedException ex) {
                 System.out.println("ERROR   " + ex.getMessage());
             }
         }
-
     }
 
     public static void listaProcesos() {
@@ -37,6 +34,7 @@ public class ProcesoHilo extends Thread {
             while ((s = stdError.readLine()) != null) {
                 System.out.println(s);
             }
+            //System.exit(0);
         } catch (IOException e) {
             e.printStackTrace();
         }

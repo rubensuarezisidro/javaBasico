@@ -5,10 +5,10 @@ import java.io.File;
 public class EntradaSalida {
     
     public static void main(String[] args) {
-        EntradaSalida.verificaArchivo();
+        EntradaSalida.crearDirectorio();
         
     }
-
+    
     public static void verificaArchivo() {
         // Tipo Archivo nom_variable = new Clase(colocar ruta absoluta)
         File f = new File("C:\\temario.txt");
@@ -25,6 +25,23 @@ public class EntradaSalida {
         } else {
             System.out.println("El archivo no existe");
         }
-
+        
+    }
+    
+    public static void listarDirectorio() {
+        File f = new File("C:\\");
+        if (f.isDirectory() && f.exists()) {
+            for (String listDir : f.list()) {;
+                System.out.println(listDir);
+            }
+        }
+    }
+    
+    public static void crearDirectorio() {
+        File f = new File("C:\\javaTecsup");
+        //negacions ara la consulta
+        if (!f.isDirectory() && !f.exists()) {
+            f.mkdir();
+        }
     }
 }

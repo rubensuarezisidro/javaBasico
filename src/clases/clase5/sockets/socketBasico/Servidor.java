@@ -1,4 +1,4 @@
-package clases.clase5.sockets.ejemplo1;
+package clases.clase5.sockets.socketBasico;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

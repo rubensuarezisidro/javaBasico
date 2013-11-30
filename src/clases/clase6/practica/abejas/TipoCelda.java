@@ -1,5 +1,5 @@
 
-package clases.clase6.practica.abejas.abstractas;
+package clases.clase6.practica.abejas;
 
 
 public class TipoCelda {

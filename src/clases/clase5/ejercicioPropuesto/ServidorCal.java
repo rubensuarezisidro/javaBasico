@@ -36,7 +36,7 @@ public class ServidorCal {
                 switch (ope) {
                     case "s":
                         resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
-                        
+
                         break;
                     case "r":
                         resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
@@ -60,7 +60,9 @@ public class ServidorCal {
         } catch (IOException e) {
             System.out.println("Error : " + e.getMessage());
         } catch (ArithmeticException ae) {
-            System.out.println("error en operacion " + ae.getMessage());
+            System.out.println("error en operación " + ae.getMessage());
+        } catch (NumberFormatException ne) {
+            System.out.println("error, no es número " + ne.getMessage());
         }
 
     }

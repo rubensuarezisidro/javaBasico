@@ -25,17 +25,18 @@ public class ServidorCal {
 
             while (true) {
                 Socket cliente = server.accept();
-                PrintWriter out = new PrintWriter(cliente.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
-                out.println("CALCULADORA ");
-                String ope = in.readLine();
-                String num1 = in.readLine();
-                String num2 = in.readLine();
+                PrintWriter envia = new PrintWriter(cliente.getOutputStream(), true);
+                BufferedReader recibe = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                envia.println("CALCULADORA ");
+                String ope = recibe.readLine();
+                String num1 = recibe.readLine();
+                String num2 = recibe.readLine();
 
                 double resultado = 0;
                 switch (ope) {
                     case "s":
                         resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
+                        
                         break;
                     case "r":
                         resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
@@ -47,18 +48,17 @@ public class ServidorCal {
                         resultado = Double.parseDouble(num1) / Double.parseDouble(num2);
                         break;
                 }
-                out.println("EL RESULTADO DE " + num1 + " " + ope + " " + num2 + " es " + resultado);
+                envia.println("EL RESULTADO DE " + num1 + " " + ope + " " + num2 + " es " + resultado);
                 /*
                  * Cerramos el canal
                  */
-                in.close();
-                out.close();
+                recibe.close();
+                envia.close();
                 cliente.close();
             }
 
         } catch (IOException e) {
             System.out.println("Error : " + e.getMessage());
-            e.printStackTrace();
         } catch (ArithmeticException ae) {
             System.out.println("error en operacion " + ae.getMessage());
         }

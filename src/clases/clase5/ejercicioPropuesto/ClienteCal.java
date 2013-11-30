@@ -1,4 +1,3 @@
-
 package clases.clase5.ejercicioPropuesto;
 
 import java.io.BufferedReader;
@@ -21,16 +20,18 @@ public class ClienteCal {
             Socket cliente = new Socket(host, port);
 // Crear los canales de lectura y escritura
             BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
-            PrintWriter salida = new PrintWriter(cliente.getOutputStream(), true);
+            PrintWriter envia = new PrintWriter(cliente.getOutputStream(), true);
 // COMUNICACION 1
             String msg = entrada.readLine();
             System.out.println(msg);
-            salida.println("s");
-            salida.println(10);
-            salida.println(20);
+            envia.println("d");
+            envia.println(81);
+            envia.println(9);
+            msg = entrada.readLine();
+            System.out.println(msg);
 // Cerrar canales
             entrada.close();
-            salida.close();
+            envia.close();
             cliente.close();
         } catch (Exception e) {
             System.out.println("Error Cliente : " + e.getMessage());

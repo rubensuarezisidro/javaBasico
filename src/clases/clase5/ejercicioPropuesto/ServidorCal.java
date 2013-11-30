@@ -21,7 +21,7 @@ public class ServidorCal {
         try {
 // Creamos un servidor de Socket
             server = new ServerSocket(port);
-            System.out.println("Servidor iniciado...");
+            System.out.println("Servidor listo para calcular...");
 
             while (true) {
                 Socket cliente = server.accept();
@@ -32,7 +32,7 @@ public class ServidorCal {
                 String num1 = in.readLine();
                 String num2 = in.readLine();
 
-                double resultado=0;
+                double resultado = 0;
                 switch (ope) {
                     case "s":
                         resultado = Double.parseDouble(num1) + Double.parseDouble(num2);

@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Cliente {
-
+/// mensaje 
     private String host;
     private int port;
 

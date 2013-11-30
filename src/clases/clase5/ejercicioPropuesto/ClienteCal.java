@@ -20,17 +20,17 @@ public class ClienteCal {
         try {
             Socket cliente = new Socket(host, port);
 // Crear los canales de lectura y escritura
-            BufferedReader in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
-            PrintWriter out = new PrintWriter(cliente.getOutputStream(), true);
+            BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+            PrintWriter salida = new PrintWriter(cliente.getOutputStream(), true);
 // COMUNICACION 1
-            String msg = in.readLine();
+            String msg = entrada.readLine();
             System.out.println(msg);
-            out.println("s");
-            out.println(10);
-            out.println(20);
+            salida.println("s");
+            salida.println(10);
+            salida.println(20);
 // Cerrar canales
-            in.close();
-            out.close();
+            entrada.close();
+            salida.close();
             cliente.close();
         } catch (Exception e) {
             System.out.println("Error Cliente : " + e.getMessage());

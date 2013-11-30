@@ -1,6 +1,7 @@
 package clases.clase5.ejercicioPropuesto;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -21,7 +22,7 @@ public class ServidorCal {
 // Creamos un servidor de Socket
             server = new ServerSocket(port);
             System.out.println("Servidor iniciado...");
-            
+
             while (true) {
                 Socket cliente = server.accept();
                 PrintWriter out = new PrintWriter(cliente.getOutputStream(), true);
@@ -30,10 +31,21 @@ public class ServidorCal {
                 out.println("Ingrese 1er NUMERO: ");
                 String num1 = in.readLine();
                 out.println("Ingrese 2do NUMERO: ");
-                String ope = in.readLine();
-                out.println("Ingrese OPERACION: ");
                 String num2 = in.readLine();
-                
+                out.println("Ingrese OPERACION: ");
+
+                String ope = in.readLine();
+                double resultado;
+
+                // aca el if, segun operacion que se va a realizar 
+                resultado = Double.parseDouble(num1) + Double.parseDouble(num2);
+
+                resultado = Double.parseDouble(num1) - Double.parseDouble(num2);
+
+                resultado = Double.parseDouble(num1) * Double.parseDouble(num2);
+
+                resultado = Double.parseDouble(num1) / Double.parseDouble(num2);
+                out.println("EL RESULTADO DE " + num1 + " " + ope + " " + num2 + " es " + resultado);
                 /*
                  * Cerramos el canal
                  */
@@ -41,9 +53,12 @@ public class ServidorCal {
                 out.close();
                 cliente.close();
             }
-        } catch (Exception e) {
+
+        } catch (IOException e) {
             System.out.println("Error : " + e.getMessage());
             e.printStackTrace();
+        } catch (ArithmeticException ae) {
+            System.out.println("error en operacion " + ae.getMessage());
         }
 
     }

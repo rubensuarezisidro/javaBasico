@@ -17,16 +17,16 @@ public class ServidorHilo extends Thread {
 
     public void run() {
         try {
-// Crear los canales de lectura y escritura
+
             PrintWriter salida = new PrintWriter(cliente.getOutputStream(), true);
-            BufferedReader entrada = new BufferedReader(new InputStreamReader(
-                    cliente.getInputStream()));
-// COMUNICACION 1
+            BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+
+            salida.println("CURSO JAVA BASICO - 2013 ");
             salida.println("SERVIDOR: Bienvenido, ¿Cómo te llamas? ");
-// COMUNICACION 2
-            String resp2 = entrada.readLine();
-            System.out.println(resp2);
-//Cerramos el canal
+
+            String respuestaCliente = entrada.readLine();
+            System.out.println(respuestaCliente);
+
             entrada.close();
             salida.close();
             cliente.close();

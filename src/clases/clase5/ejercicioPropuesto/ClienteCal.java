@@ -16,7 +16,7 @@ public class ClienteCal {
         this.port = port;
     }
 
-    public void doConectar() {
+    public void solicitar() {
         try {
             Socket cliente = new Socket(host, port);
 // Crear los canales de lectura y escritura
@@ -25,8 +25,9 @@ public class ClienteCal {
 // COMUNICACION 1
             String msg = in.readLine();
             System.out.println(msg);
-// COMUNICACION 2
-            out.println("CLIENTE: Ruben SUAREZ");
+            out.println("s");
+            out.println(10);
+            out.println(20);
 // Cerrar canales
             in.close();
             out.close();

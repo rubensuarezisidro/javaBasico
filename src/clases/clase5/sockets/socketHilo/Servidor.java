@@ -19,8 +19,9 @@ public class Servidor {
             while (true) {
                 System.out.println("Esperando ...");
                 Socket cliente = server.accept();
-                ServidorHilo ts = new ServidorHilo(cliente);
-                ts.start();
+                // se está instanciando el servidor hilo
+                ServidorHilo servHilo = new ServidorHilo(cliente);
+                servHilo.start();
             }
         } catch (Exception e) {
             System.out.println("Error : " + e.getMessage());

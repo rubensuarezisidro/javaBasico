@@ -1,10 +1,12 @@
 package clases.clase5.sockets.socketHilo;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Cliente {
+
     private String host;
     private int port;
 
@@ -23,13 +25,13 @@ public class Cliente {
             String msg = entrada.readLine();
             System.out.println(msg);
 // COMUNICACION 2
-            salida.println("CLIENTE: Ruben SUAREZ");
+            salida.println("CLIENTE: RUBEN SUAREZ");
 // Cerrar canales
             entrada.close();
             salida.close();
             cliente.close();
         } catch (Exception e) {
-            System.out.println("Error Cliente : " + e.getMessage());
+            System.out.println("ERROR CLIENTE : " + e.getMessage());
         }
     }
 }

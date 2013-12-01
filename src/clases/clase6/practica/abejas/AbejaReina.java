@@ -5,7 +5,8 @@ import clases.clase6.practica.abejas.abstractas.Abeja;
 import clases.clase6.practica.abejas.interfases.Reina;
 
 public class AbejaReina extends Abeja implements Reina{
-
+     private int periodo=16;
+     
     @Override
     public void ponerHuevo() {
         System.out.println("PONIENDO HUEVOS");    

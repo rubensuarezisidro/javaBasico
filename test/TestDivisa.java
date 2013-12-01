@@ -20,6 +20,6 @@ public class TestDivisa {
         //con los datos que se supone ddbe salir
         Divisa divisaEsperda = new Divisa(50, "Soles");
         
-        assertEquals(divisaEsperda.getImporte(), resultado.getImporte());
+        assertEquals("veamos que sale",divisaEsperda.getImporte(), resultado.getImporte());
     }
 }

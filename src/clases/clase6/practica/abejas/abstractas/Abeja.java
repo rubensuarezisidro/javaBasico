@@ -12,7 +12,7 @@ public class Abeja extends Insecto{
 
     
     @Override
-    public void volar() {
+    public void conAlas() {
         System.out.println("volando");
     }
 
